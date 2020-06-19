@@ -7,19 +7,28 @@ using namespace std;
 
 int main()
 {
-	Root* roots[5];
+	Linear l{};
+	cout << l << endl;
+	l.solve();
+	cout << l << endl;
+
+	Square s{};
+	s.solve();
+	cout << s << endl;
 
 	Linear l1(1, -2);
-	cout << l1 << endl;
-	l1.solve();
-	cout << l1 << endl;
-
 	Linear l2(0, 0);
-	l2.solve();
-	cout << l2 << endl;
-
 	Linear l3(0, 1);
-	l3.solve();
-	cout << l3 << endl;
+
+	Square s1{0, 1, 0};
+	Square s2{1, 0, -1};
+	Square s3{1, 0, 1};
+
+	Root* roots[6] = {&l1, &l2, &l3, &s1, &s2, &s3};
+	for (int i = 0; i < 6; i++) {
+		roots[i]->solve();
+		cout << *(roots[i]) << endl;
+	}
+
 	return 0;
 }

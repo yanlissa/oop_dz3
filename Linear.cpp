@@ -24,11 +24,11 @@ std::ostream& Linear::print(std::ostream& out) const
 	}
 	out << "x ";
 	if (m_b < 0) {
-		out << "- " << -m_b;
-	} else {
-		out << "+ " << m_b;
+		out << "- " << -m_b << " ";
+	} else if (m_b > 0) {
+		out << "+ " << m_b << " ";
 	}
-	out << " = 0: x";
+	out << "= 0: x";
 	if (!m_solved) {
 		return out << " is still unsolved";
 	}
