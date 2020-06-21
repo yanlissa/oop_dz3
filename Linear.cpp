@@ -15,6 +15,9 @@ void Linear::solve()
 
 	m_x = -m_b;
 	m_x /= m_a;
+	if (m_x == 0.0) {
+		m_x = 0.0;
+	}
 }
 
 std::ostream& Linear::print(std::ostream& out) const

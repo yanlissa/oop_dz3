@@ -18,9 +18,18 @@ void Square::solve()
 		D = sqrt(D);
 		m_x1 = (-m_b + D) / (2 * m_a);
 		m_x2 = (-m_b - D) / (2 * m_a);
+		if (m_x1 == 0.0) {
+			m_x1 = 0.0;
+		}
+		if (m_x2 == 0.0) {
+			m_x2 = 0.0;
+		}
 	} else {
 		m_zero_D = true;
 		m_x1 = -m_b / (2 * m_a);
+		if (m_x1 == 0.0) {
+			m_x1 = 0.0;
+		}
 	}
 }
 
