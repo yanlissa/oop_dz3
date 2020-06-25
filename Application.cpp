@@ -59,6 +59,16 @@ void Application::InputLinear()
 	m_eq = new Linear(a, b);
 }
 
+void Application::InputSquare()
+{
+	double a, b, c;
+	cout << "ax² + bx + c = 0" << endl;
+	cout << "Введите a, b и c: ";
+	cin >> a >> b >> c;
+	cout << a << " " << b << " " << c << endl;
+	m_eq = new Square(a, b, c);
+}
+
 void Application::Solve()
 {
 	m_eq->solve();
@@ -82,6 +92,9 @@ void Application::Run()
 			break;
 		case 2:
 			InputLinear();
+			break;
+		case 3:
+			InputSquare();
 			break;
 		case 4:
 			Solve();

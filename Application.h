@@ -8,6 +8,7 @@ private:
 	void PrintMenu();
 	void TestAll();
 	void InputLinear();
+	void InputSquare();
 	void Solve();
 public:
 	Application()
