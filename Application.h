@@ -7,6 +7,8 @@ private:
 private:
 	void PrintMenu();
 	void TestAll();
+	void InputLinear();
+	void Solve();
 public:
 	Application()
 		:m_eq{nullptr}

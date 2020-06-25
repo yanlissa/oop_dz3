@@ -41,8 +41,27 @@ void Application::PrintMenu()
 	}
 	cout << "0: Выход" << endl;
 	cout << "1: Отладочный вывод" << endl;
+	cout << "2: Задать линейное уравнение" << endl;
+	if (m_eq) {
+		cout << "4: Решить уравнение" << endl;
+	}
 	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 	cout << "Выберите пункт: ";
+}
+
+void Application::InputLinear()
+{
+	double a, b;
+	cout << "ax + b = 0" << endl;
+	cout << "Введите a и b: ";
+	cin >> a >> b;
+	cout << a << " " << b << endl;
+	m_eq = new Linear(a, b);
+}
+
+void Application::Solve()
+{
+	m_eq->solve();
 }
 
 void Application::Run()
@@ -60,6 +79,12 @@ void Application::Run()
 			break;
 		case 1:
 			TestAll();
+			break;
+		case 2:
+			InputLinear();
+			break;
+		case 4:
+			Solve();
 			break;
 		default:
 			break;
