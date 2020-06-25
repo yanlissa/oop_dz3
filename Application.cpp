@@ -56,6 +56,7 @@ void Application::InputLinear()
 	cout << "Введите a и b: ";
 	cin >> a >> b;
 	cout << a << " " << b << endl;
+	delete m_eq;
 	m_eq = new Linear(a, b);
 }
 
@@ -66,6 +67,7 @@ void Application::InputSquare()
 	cout << "Введите a, b и c: ";
 	cin >> a >> b >> c;
 	cout << a << " " << b << " " << c << endl;
+	delete m_eq;
 	m_eq = new Square(a, b, c);
 }
 
