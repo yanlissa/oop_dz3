@@ -34,6 +34,11 @@ void Application::TestAll()
 void Application::PrintMenu()
 {
 	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+	if (m_eq) {
+		cout << *m_eq << endl;
+	} else {
+		cout << "Уравнение не задано" << endl;
+	}
 	cout << "0: Выход" << endl;
 	cout << "1: Отладочный вывод" << endl;
 	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
