@@ -16,6 +16,6 @@ public:
 		:m_a{a}, m_b{b}, m_solved{false}, m_any_x{false}, m_no_x{false}
 	{}
 
-	virtual void solve();
-	virtual std::ostream& print(std::ostream& out) const;
+	void solve() override;
+	std::ostream& print(std::ostream& out) const override;
 };

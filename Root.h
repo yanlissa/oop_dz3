@@ -4,6 +4,9 @@
 class Root
 {
 public:
+	virtual ~Root()
+	{};
+
 	virtual void solve() = 0;
 	virtual std::ostream& print(std::ostream& out) const = 0;
 

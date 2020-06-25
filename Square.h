@@ -36,6 +36,6 @@ public:
 		}
 	}
 
-	virtual void solve();
-	virtual std::ostream& print(std::ostream& out) const;
+	void solve() override;
+	std::ostream& print(std::ostream& out) const override;
 };
