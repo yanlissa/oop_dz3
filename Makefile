@@ -1,13 +1,13 @@
-all: dz4
+all: dz3
 
 %.o: %.cpp *.h Makefile
 	g++ -c $< -o $@
 
-dz4: Linear.o Square.o dz4.o
+dz3: Linear.o Square.o Application.o dz3.o
 	g++ -o $@ $^
 
 clean:
-	dz4 rm *.o
+	rm dz3 *.o
 
 test: all
-	./dz4
+	cat test_input.txt | ./dz3
